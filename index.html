@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Альмео Джемилев — научная коммуникация</title>
+<meta name="description" content="Портфолио специалиста по научной коммуникации: Telegram-сообщества, биоинформатика, IT и наука.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--fg:#fff;--g:#9ACD32;--dim:#b9b9b9;--card:#0d0d0d}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:'Pixelify Sans',monospace;font-size:19px;line-height:1.55;overflow-x:hidden;image-rendering:pixelated}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;background:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 1px,transparent 1px 3px)}
+h1,h2,h3,.px{font-family:'Press Start 2P',monospace;font-weight:400;line-height:1.5;text-transform:uppercase}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px;position:relative;z-index:2}
+section{position:relative;padding:80px 0;overflow:hidden}
+h2{font-size:clamp(18px,3.4vw,28px);color:var(--g);margin-bottom:36px}
+h2::before{content:"> ";color:var(--fg)}
+
+/* nav */
+nav{position:sticky;top:0;z-index:60;background:#000;border-bottom:4px solid var(--g)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+nav b{font-family:'Press Start 2P';font-size:12px;color:var(--g)}
+nav ul{list-style:none;display:flex;gap:18px;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:17px}
+nav a:hover{color:var(--g)}
+
+/* floaters */
+.fl{position:absolute;z-index:1;opacity:.9;pointer-events:none;animation:float var(--d,6s) ease-in-out var(--dl,0s) infinite alternate}
+.fl.st{animation:floatpx var(--d,6s) steps(6) var(--dl,0s) infinite alternate}
+.fl.sp{animation:spin var(--d,8s) steps(8) infinite}
+.fl svg{display:block;shape-rendering:crispEdges}
+@keyframes float{from{transform:translate(0,0) rotate(-6deg)}to{transform:translate(18px,-34px) rotate(8deg)}}
+@keyframes floatpx{from{transform:translate(-14px,10px)}to{transform:translate(14px,-26px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* hero */
+.hero{padding-top:70px;min-height:86vh;display:flex;align-items:center}
+.tag{display:inline-block;background:var(--g);color:#000;font-family:'Press Start 2P';font-size:11px;padding:8px 12px;margin-bottom:24px}
+h1{font-size:clamp(24px,6vw,54px);color:var(--g);margin-bottom:20px;text-shadow:4px 4px 0 #2a3a0c}
+h1 span{color:var(--fg)}
+.lead{max-width:640px;color:var(--dim);margin-bottom:30px}
+.search{display:flex;max-width:620px;border:4px solid #fff;background:var(--g);color:#000;box-shadow:8px 8px 0 #2f4b00;margin-bottom:34px}
+.search div{flex:1;padding:14px 16px;font-size:21px;font-weight:600;min-height:56px}
+.search div::after{content:"█";animation:blink 1s steps(2) infinite}
+.search i{background:#fff;color:#000;width:64px;display:grid;place-items:center;font-style:normal;font-size:26px;border-left:4px solid #000}
+@keyframes blink{50%{opacity:0}}
+.btn{display:inline-block;text-decoration:none;font-family:'Press Start 2P';font-size:12px;padding:14px 18px;border:4px solid var(--g);background:#000;color:var(--g);box-shadow:6px 6px 0 var(--g);margin:0 14px 14px 0;transition:transform .08s steps(2),box-shadow .08s steps(2)}
+.btn.fill{background:var(--g);color:#000}
+.btn:hover{transform:translate(4px,4px);box-shadow:2px 2px 0 var(--g)}
+
+/* marquee */
+.marq{background:var(--g);color:#000;border-block:4px solid #fff;overflow:hidden;white-space:nowrap;padding:10px 0}
+.marq div{display:inline-block;font-family:'Press Start 2P';font-size:12px;animation:mq 28s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* about */
+.grid2{display:grid;grid-template-columns:1.4fr 1fr;gap:30px}
+.box{border:4px solid #fff;background:var(--card);padding:24px;box-shadow:8px 8px 0 var(--g)}
+.box h3{font-size:13px;color:var(--g);margin-bottom:14px}
+.box p+p{margin-top:12px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{border:3px solid var(--g);padding:3px 10px;font-size:17px;color:var(--g)}
+.chips span:hover{background:var(--g);color:#000}
+
+/* stats (white sticker block) */
+.stats{background:#fff;color:#000}
+.stats h2{color:#000}.stats h2::before{color:var(--g)}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px}
+.stat{background:#000;color:var(--g);border:4px solid #000;outline:6px solid var(--g);padding:26px 20px;text-align:center;transition:transform .15s steps(3)}
+.stat:hover{transform:translateY(-8px) rotate(-1.5deg)}
+.stat .n{font-family:'Press Start 2P';font-size:clamp(26px,4vw,38px);display:block;margin-bottom:14px}
+.stat small{color:#fff;font-size:18px;display:block}
+.bar{height:16px;border:3px solid var(--g);margin-top:16px;background:repeating-linear-gradient(90deg,transparent 0 6px,#000 6px 8px)}
+.bar i{display:block;height:100%;width:0;background:var(--g);transition:width 1.6s steps(16)}
+
+/* projects */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px}
+.card{display:flex;flex-direction:column;border:4px solid #fff;background:var(--card);padding:22px;text-decoration:none;box-shadow:8px 8px 0 var(--g);transition:transform .1s steps(2),box-shadow .1s steps(2)}
+.card:hover{transform:translate(6px,6px);box-shadow:2px 2px 0 var(--g);border-color:var(--g)}
+.card .ic{font-family:'Press Start 2P';font-size:10px;color:#000;background:var(--g);padding:5px 8px;align-self:flex-start;margin-bottom:14px}
+.card h3{font-size:14px;margin-bottom:12px}
+.card p{color:var(--dim);flex:1;margin-bottom:16px}
+.card em{font-style:normal;color:var(--g);font-family:'Press Start 2P';font-size:10px}
+
+/* timeline */
+.tl{border-left:4px solid var(--g);padding-left:26px;display:grid;gap:26px}
+.tl div{position:relative}
+.tl div::before{content:"";position:absolute;left:-36px;top:6px;width:14px;height:14px;background:var(--g);box-shadow:0 0 0 4px #000}
+.tl b{font-family:'Press Start 2P';font-size:12px;color:var(--g);display:block;margin-bottom:6px;font-weight:400}
+.tl span{color:var(--dim)}
+
+footer{border-top:4px solid var(--g);padding:50px 0 70px;text-align:center}
+footer .px{font-size:13px;color:var(--g);margin-bottom:22px}
+footer small{display:block;color:var(--dim);margin-top:26px}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}.fl{opacity:.45}body{font-size:18px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <b>[ ДЖЕМИЛЕВ.EXE ]</b>
+  <ul><li><a href="#about">Обо мне</a></li><li><a href="#stats">Цифры</a></li><li><a href="#projects">Проекты</a></li><li><a href="#path">Путь</a></li><li><a href="#contact">Контакты</a></li></ul>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="tag">★ НАУЧНАЯ КОММУНИКАЦИЯ</span>
+    <h1>Альмео<br><span>Джемилев</span></h1>
+    <p class="lead">Объясняю сложное простыми словами. Веду научные и IT-сообщества в Telegram, пишу посты, интервью и материалы по исследованиям. Разбираюсь в биологии, биоинформатике и IT.</p>
+    <div class="search"><div id="typed"></div><i>⌕</i></div>
+    <a class="btn fill" href="#projects">Проекты</a>
+    <a class="btn" href="https://t.me/meomeo_fenn" target="_blank" rel="noopener">Написать мне</a>
+  </div>
+</header>
+
+<div class="marq"><div id="mq"></div></div>
+
+<section id="about">
+  <div class="wrap">
+    <h2>Обо мне</h2>
+    <div class="grid2">
+      <div class="box">
+        <h3>Профиль</h3>
+        <p>Магистр научной коммуникации (ИТМО), бакалавр биологии. Пишу о науке и технологиях для Telegram и узких профессиональных аудиторий.</p>
+        <p>Опыт в IT-среде: ФКН НИУ ВШЭ и Центральный университет. Работаю в Яндексе в проекте, связанном с ИИ для вузов, и вдумчиво использую ИИ-инструменты в работе с текстом. Понимаю форматы Telegram, свободно говорю по-английски, быстро подхватываю инфоповоды.</p>
+      </div>
+      <div class="box">
+        <h3>Навыки</h3>
+        <div class="chips">
+          <span>Посты</span><span>Интервью</span><span>Карточки</span><span>Опросы</span><span>Telegram</span><span>Instagram</span><span>Биология</span><span>Биоинформатика</span><span>IT</span><span>Работа с экспертами</span><span>RU</span><span>EN</span><span>ES</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats" id="stats">
+  <div class="wrap">
+    <h2>Статистика</h2>
+    <div class="sgrid">
+      <div class="stat"><span class="n" data-to="30" data-pre="+" data-suf="%">0</span><small>рост PCR.NEWS каждый год</small><div class="bar"><i data-w="30"></i></div></div>
+      <div class="stat"><span class="n" data-to="25" data-pre="+" data-suf="%">0</span><small>рост Института биоинформатики, расширение на Telegram</small><div class="bar"><i data-w="25"></i></div></div>
+      <div class="stat"><span class="n" data-to="10" data-pre="ТОП-">0</span><small>аккаунт клуба ФКН в «Сетке»</small><div class="bar"><i data-w="100"></i></div></div>
+      <div class="stat"><span class="n" data-to="130">0</span><small>студентов IT-курса в Центральном университете, 4 специализации</small><div class="bar"><i data-w="80"></i></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Проекты</h2>
+    <div class="pgrid">
+      <a class="card" href="https://t.me/pcr_news" target="_blank" rel="noopener">
+        <span class="ic">TELEGRAM</span><h3>PCR.NEWS</h3>
+        <p>Контент и рассылки для узкой профессиональной аудитории биологов. Ежедневные коммуникации, рост +30% каждый год.</p><em>ОТКРЫТЬ &gt;&gt;</em></a>
+      <a class="card" href="https://t.me/bioinforussia" target="_blank" rel="noopener">
+        <span class="ic">TELEGRAM</span><h3>Институт биоинформатики</h3>
+        <p>Посты, форматы (карточки, опросы), общение с учёными напрямую. Рост +25%, расширение на Telegram.</p><em>ОТКРЫТЬ &gt;&gt;</em></a>
+      <a class="card" href="https://t.me/entclub_cs" target="_blank" rel="noopener">
+        <span class="ic">TELEGRAM</span><h3>Клуб предпринимателей ФКН</h3>
+        <p>Вывел аккаунт в «Сетке» в топ-10. Согласование материалов с преподавателями и экспертами.</p><em>ОТКРЫТЬ &gt;&gt;</em></a>
+      <a class="card" href="https://centraluniversity.ru" target="_blank" rel="noopener">
+        <span class="ic">САЙТ</span><h3>Центральный университет</h3>
+        <p>IT-курс на 130 студентов с четырьмя специализациями: координация с преподавателями и экспертами, ревью со студентами.</p><em>ОТКРЫТЬ &gt;&gt;</em></a>
+    </div>
+  </div>
+</section>
+
+<section id="path">
+  <div class="wrap">
+    <h2>Путь</h2>
+    <div class="tl">
+      <div><b>Яндекс</b><span>Проект, связанный с ИИ для вузов (NDA).</span></div>
+      <div><b>Институт биоинформатики</b><span>Telegram и Instagram научного сообщества: посты, карточки, опросы, материалы по исследованиям.</span></div>
+      <div><b>PCR.NEWS</b><span>Контент и рассылки для биологов, Telegram-сообщество курсов.</span></div>
+      <div><b>Летняя школа</b><span>Интервью с экспертами, посты, работа с участниками проекта.</span></div>
+      <div><b>Центральный университет</b><span>IT-курс на 130 студентов, координация преподавателей и экспертов.</span></div>
+      <div><b>ФКН НИУ ВШЭ</b><span>Ведение Telegram, сбор фактуры у преподавателей, топ-10 в «Сетке».</span></div>
+      <div><b>Образование</b><span>Магистр научной коммуникации, ИТМО. Бакалавр биологии, МВА им. К.И. Скрябина.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <p class="px">&gt; Давайте делать науку понятной</p>
+    <a class="btn fill" href="https://t.me/meomeo_fenn" target="_blank" rel="noopener">Telegram</a>
+    <a class="btn" href="mailto:almeodzemilev@gmail.com">Email</a>
+    <small>Работаю удалённо · договор через ИП · © 2026 Альмео Джемилев</small>
+  </div>
+</footer>
+
+<script>
+// пиксельные спрайты
+const S={
+ spark:["....#....","....#....","...###...","...###...","#########","...###...","...###...","....#....","....#...."],
+ heart:[".##...##.","#########","#########","#########",".#######.","..#####..","...###...","....#...."],
+ smile:["..#####..",".#.....#.","#.......#","#.#...#.#","#.......#","#.#...#.#","#..###..#",".#.....#.","..#####.."],
+ arrow:["......#..",".......#.","#########",".......#.","......#.."],
+ cross:["#.....#",".#...#.","..#.#..","...#...","..#.#..",".#...#.","#.....#"],
+ ring:["..#####..",".#######.","###...###","###...###","###...###","###...###","###...###",".#######.","..#####.."]
+};
+const cols=["#9ACD32","#ffffff","#9ACD32","#6f9a1a"];
+function sprite(k,c,px){
+  const m=S[k],w=m[0].length,h=m.length;let r="";
+  m.forEach((row,y)=>[...row].forEach((ch,x)=>{if(ch==="#")r+=`<rect x="${x}" y="${y}" width="1" height="1"/>`}));
+  return `<svg viewBox="0 0 ${w} ${h}" width="${w*px}" height="${h*px}" fill="${c}">${r}</svg>`;
+}
+const keys=Object.keys(S);
+document.querySelectorAll('section,header.hero').forEach((sec,si)=>{
+  const n=sec.classList.contains('hero')?9:4;
+  for(let i=0;i<n;i++){
+    const k=keys[(i+si)%keys.length],d=document.createElement('div');
+    d.className='fl'+(i%3===1?' st':'')+(k==='cross'||k==='spark'&&i%2?' sp':'');
+    d.innerHTML=sprite(k,sec.classList.contains('stats')?'#000':cols[(i+si)%cols.length],4+(i%3)*2);
+    d.style.cssText=`left:${Math.random()*92}%;top:${6+Math.random()*80}%;--d:${5+Math.random()*6}s;--dl:-${Math.random()*5}s`;
+    sec.prepend(d);
+  }
+});
+
+// печатающаяся строка поиска
+const phrases=["@science brutalist pixelated","научная коммуникация","биоинформатика и Telegram","как объяснить ПЦР за минуту?"];
+const t=document.getElementById('typed');let p=0,c=0,del=false;
+(function tick(){
+  const s=phrases[p];
+  t.textContent=s.slice(0,c);
+  if(!del&&c===s.length){del=true;return setTimeout(tick,1600)}
+  if(del&&c===0){del=false;p=(p+1)%phrases.length}
+  c+=del?-1:1;setTimeout(tick,del?35:80);
+})();
+
+// бегущая строка
+const words="НАУЧНАЯ КОММУНИКАЦИЯ ✦ БИОИНФОРМАТИКА ✦ TELEGRAM ✦ IT ✦ БИОЛОГИЯ ✦ ИИ ✦ ИНТЕРВЬЮ ✦ ";
+document.getElementById('mq').textContent=words.repeat(8);
+
+// счётчики и полосы
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;io.unobserve(e.target);
+  e.target.querySelectorAll('[data-to]').forEach(el=>{
+    const to=+el.dataset.to,pre=el.dataset.pre||"",suf=el.dataset.suf||"";let v=0;
+    const id=setInterval(()=>{v+=Math.max(1,Math.ceil(to/20));if(v>=to){v=to;clearInterval(id)}el.textContent=pre+v+suf},60);
+  });
+  e.target.querySelectorAll('[data-w]').forEach(b=>b.style.width=b.dataset.w+'%');
+}),{threshold:.3});
+io.observe(document.getElementById('stats'));
+
+// лёгкий параллакс от мыши
+addEventListener('pointermove',e=>{
+  const x=(e.clientX/innerWidth-.5)*16,y=(e.clientY/innerHeight-.5)*16;
+  document.querySelectorAll('.hero .fl svg').forEach((s,i)=>s.style.transform=`translate(${x*(i%3+1)}px,${y*(i%3+1)}px)`);
+});
+</script>
+</body>
+</html>
